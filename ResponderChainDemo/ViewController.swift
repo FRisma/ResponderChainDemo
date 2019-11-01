@@ -18,3 +18,37 @@ class ViewController: UIViewController {
 
 }
 
+extension UILabel {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("UILabel touchesBegan()")
+        next?.touchesBegan(touches, with: event)
+    }
+}
+
+extension UIView {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("UIView touchesBegan()")
+        next?.touchesBegan(touches, with: event)
+    }
+}
+
+extension UIViewController {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("UIViewController touchesBegan()")
+        next?.touchesBegan(touches, with: event)
+    }
+}
+
+extension UIWindow {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("UIWindow touchesBegan()")
+        next?.touchesBegan(touches, with: event)
+    }
+}
+
+extension AppDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("AppDelegate touchesBegan()")
+    }
+}
+
