@@ -16,8 +16,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
+       
+	   // Send a message to responder chain
         UIApplication.shared.sendAction(#selector(ListAction.didDoSomething(_:)), to: nil, from: self, for: nil)
     }
 
